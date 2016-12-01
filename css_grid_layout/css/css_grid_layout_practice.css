@@ -1,3 +1,7 @@
+/*
+	Final Note: I tried to use this with the Chrome flag enabled, but the grid layout still doesn't seem to be supported. Upon further reading, I found that it may not be supported until Summer 2017. For now, I'm saving the file as is and hoping the grid system gets adopted quickly.
+*/
+
 * {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -5,6 +9,73 @@
 }
 
 body {
-	width: 100%;
-	margin: 0;
+	text-align: center;
+	font-family: "Dosis";
+}
+
+.grid_container {
+	display: grid;
+	/*
+		Note: the following style elements do the following:
+		"properties are used to specify the width of various rows and columns"; "The 10px columns act as gutters to provide required spacing between elements. the column is 200px wide. The third column takes up 0.3 parts of the remaining space. Similary, fifth column takes up 0.7 parts of the remaining space." "Using auto for the first row in grid-template-rows allows the row to expand as necessary based on the content inside it. The 20px row acts as a gutter."
+	*/
+	grid-template-columns: 0.25fr 10px 0.7fr;
+	grid-template-rows: auto 20px auto 20px auto 20px auto;
+}
+
+.grid-element {
+	background-color: #444;
+	color: #fff;
+	padding: 20px;
+	font-size: 2em;
+}
+
+/*
+	Note: Article explanation of grid alignment is the following:
+	In this example, we will be using “line-based placements”. Line-based placement means that the lines in our grid system will act as guidelines to place and confine elements. Let’s take element B as an example. Horizontally, it starts at column line 3 and ends at column line 4. Along the vertical axis, it is located between the line at row 1 and the line at row 2.
+
+	We use grid-column-start to specify the starting vertical line for an element. In this case, it would be set to 3. grid-column-end indicates the ending vertical line for an element. This property would be equal to 4 in this case. Corresponding row values will also be set similarly.
+
+	Note: Article implemented element name changes for better example. The above comment is still helpful to understand how it works.
+*/
+
+.header {
+	grid-column-start: 1;
+	gird-column-end: 4;
+	grid-row-start: 1;
+	grid-row-end: 2;
+	background: #69f;
+}
+
+.sidebar {
+	grid-column-start: 1;
+	grid-column-end: 2;
+	grid-row-start: 3;
+	grid-row-end: 6;
+	background: #6F9;
+}
+
+.main {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 3;
+	grid-row-end: 4;
+	background: #F69;
+	height: 400px;	
+}
+
+.extra {
+	grid-column-start: 3;
+	grid-column-end: 4;
+	grid-row-start: 5;
+	grid-row-end: 6;
+	background: #9F6;
+}
+
+.footer {
+	grid-column-start: 1;
+	grid-column-end: 4;
+	grid-row-start: 7;
+	grid-row-end: 8;
+	background: #F96;
 }

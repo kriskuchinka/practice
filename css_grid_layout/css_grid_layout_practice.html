@@ -2,9 +2,12 @@
 <html lang="en">
 <head>
 	<!-- 
+		Final Note: I tried to use this with the Chrome flag enabled, but the grid layout still doesn't seem to be supported. Upon further reading, I found that it may not be supported until Summer 2017. For now, I'm saving the file as is and hoping the grid system gets adopted quickly.
+	-->
+	<!-- 
 		This is based on an article I found at https://goo.gl/B4GvgF. I am following along with the tutorial to learn how to use the grid layout features in CSS.
 
-		According to the article, this practice is only being utilized fully in IE10 and Edge, but there is a way to add flags for Chrome and Firefox. 
+		According to the article, this practice is only being utilized fully in IE10 and Edge, but there is a way to add flags for Chrome and Firefox. I think there is a chance that, based on the age of the article, these may not be necessary anymore.
 
 		Also, according to the article, this is the future of CSS alignment, given the modular elements of web driven applications.
 	-->
@@ -14,7 +17,13 @@
 	<link rel="stylesheet" href="css/css_grid_layout_practice.css">
 </head>
 <body>
-	
+	<div class="grid-container">
+		<div class="grid-element header">Header</div>
+		<div class="grid-element sidebar">Sidebar</div>
+		<div class="grid-element main">Main Content</div>
+		<div class="grid-element extra">Extra Info</div>
+		<div class="grid-element footer">Footer</div>
+	</div>
 	
 </body>
 </html>
