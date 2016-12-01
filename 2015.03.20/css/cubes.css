@@ -1,0 +1,147 @@
+* {
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+body {
+	width: 100%;
+	margin: 0;
+}
+
+header, footer {
+	background-color: #82acff; /* light blue */
+	width: 100%;
+	height: 100px;
+	text-align: center;
+}
+
+header h1 {
+	/* get rid of white space above header */
+	margin: 0;
+}
+
+.page_title, .closing_title {
+	font-size: 4vw;
+	padding: 20px; 
+	color: #ffffff; /*white*/
+	font-family: 'EB Garamond', serif;
+	margin: 0;
+}
+
+.row {
+	width: 100%;
+	height: 300px;
+}
+
+.column {
+	width: 33.3333%;
+	height: 100%;
+	float: left;
+	display: inline-block;
+}
+
+/* Create Diagnol Cube Effect */
+.column_one_row_one {
+	background-color: #b0e8cf; /* light green */
+} 
+
+.column_two_row_two {
+	background-color: #b0e8cf; /* light green */
+}
+
+.column_three_row_three {
+	background-color: #b0e8cf; /* light green */
+}
+
+.column_two_row_four {
+	background-color: #b0e8cf; /* light green */
+}
+
+.column_one_row_five {
+	background-color: #b0e8cf; /* light green */
+}
+
+.column_two_row_six {
+	background-color: #b0e8cf; /* light green */
+}
+
+.column_three_row_seven {
+	background-color: #b0e8cf; /* light green */
+}
+
+/* Add empty color blocks*/
+
+.column_three_row_one {
+	background-color: #f5ffd5; /* tan */
+}
+
+.column_one_row_three {
+	background-color: #ffb4a3;  /* light pink */
+}
+
+.column_three_row_five {
+	background-color: #f5ffd5; /* tan */
+}
+
+.column_one_row_seven {
+	background-color: #ffb4a3; /* light pink */	
+}
+
+/* Content for Cubes */
+
+.vertical_text {
+	transform: rotate(90deg);
+	transform-origin: left top 0;
+	float: left;
+	margin-left: 40px;
+	font-family: 'Arvo', serif;
+	margin-top: 60px;
+	font-size: 2vw;
+}
+
+p {
+	font-family: 'EB Garamond', serif;
+	font-size: 3vw;
+	margin-left: 50px;
+	float: left;
+}
+
+i.right_downward_diagnol {
+	transform: rotate(45deg);
+	position: absolute;
+	font-size: 4vw;
+}
+
+i.left_downward_diagnol {
+	transform: rotate(315deg);
+	position: absolute;
+	font-size: 4vw;
+}
+
+i.bullseye {
+	position: absolute;
+	font-size: 4vw;
+}
+
+@media screen and (max-width: 800px) {
+	.row {
+		height: 200px;
+	}
+
+	header, footer {
+		height: 75px;
+	}
+	
+} /* end of max-width:800px query */
+
+@media screen and (max-width: 500px) {
+	.row {
+		height: 150px;
+	}
+
+	header, footer {
+		height: 50px;
+	}
+}
+
